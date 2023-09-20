@@ -23,7 +23,7 @@ public class ProtobootappApplication {
     //Se ejecuta con http://localhost:8080/
     @GetMapping("/")
     public String index() {
-        return String.format("Bienvenido! Esta aplicación ayuda a elevar números a sus potencias y otras características.");
+        return String.format("Bienvenido! Esta aplicación ayuda a elevar números a sus potencias y otras características. Adicionalmente aprenderas sobre Spring y Git");
     }    
 
 //Se ejecuta con http://localhost:8080/hola o http://localhost:8080/hola?nombre=John
@@ -43,6 +43,6 @@ public class ProtobootappApplication {
     @GetMapping("/cubo")
     public String cubo(@RequestParam(value = "numero", defaultValue = "0") Double numero) {
         this.calculadora = new Calculadora();
-        return String.format("El cubo de %f es %f", numero, this.calculadora.cubo(numero));
+        return String.format("El cubo de  %f es %f", numero, this.calculadora.cubo(numero));
     }
 }
